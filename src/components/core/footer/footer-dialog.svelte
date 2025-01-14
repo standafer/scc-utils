@@ -4,7 +4,7 @@
     import Heart from "~icons/fluent-emoji-flat/sparkling-heart?raw&width=100%25&height=100%25";
     import PartyPopper from "~icons/fluent-emoji-flat/party-popper?raw&width=100%25&height=100%25";
 
-    import OutwardIcon from "./outward-icon.svelte";
+    import OutwardIcon from "@/components/outward-icon.svelte";
     import * as Dialog from "@/components/ui/dialog";
     import * as Tabs from "@/components/ui/tabs";
     import * as Accordion from "@/components/ui/accordion";

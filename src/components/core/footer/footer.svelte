@@ -1,6 +1,6 @@
 <script lang="ts">
     import Github from "~icons/mdi/github?raw&width=100%25&height=100%25";
-    import OutwardIcon from "./outward-icon.svelte";
+    import OutwardIcon from "../outward-icon.svelte";
 
     import * as Tooltip from "@/components/ui/tooltip";
     import { Button } from "@/components/ui/button";

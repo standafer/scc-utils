@@ -10,9 +10,11 @@
     import * as Collapsible from "@/components/ui/collapsible";
     import Expand from "~icons/material-symbols/expand-all?raw&width=100%25&height=100%25";
     import HTML from "~icons/material-symbols/html?raw&width=100%25&height=100%25";
+    import OutwardIcon from "./outward-icon.svelte";
 
     import { Button } from "@/components/ui/button";
     import { Separator } from "@/components/ui/separator";
+    import * as Tooltip from "@/components/ui/tooltip";
 
     import {
         type ClassEntry,
@@ -132,9 +134,25 @@
 <svelte:window bind:innerWidth />
 
 <div class="flex flex-col w-full">
-    <h4>
-        <b>All data stays local on this browser.</b> Please watch the tutorial before
-        entering files
+    <h4 class="flex items-center justify-start space-x-2 text-base">
+        <span class="font-bold">All data stays local on this browser.</span>
+        <span>Please watch</span>
+        <Tooltip.Root openDelay={0}>
+            <Tooltip.Trigger>
+                <Button
+                    href="https://www.youtube.com/watch?v=idA7ymO2aDo"
+                    target="_blank"
+                    className="flex items-center"
+                >
+                    <span class="">the tutorial</span>
+                    <OutwardIcon className="h-4 w-4" />
+                </Button>
+            </Tooltip.Trigger>
+            <Tooltip.Content>
+                <p>This is an external link to YouTube</p>
+            </Tooltip.Content>
+        </Tooltip.Root>
+        <span>before entering files</span>
     </h4>
     <Collapsible.Root class="w-full space-y-2 mt-4">
         <div class="flex items-center justify-between space-x-4 px-4">
