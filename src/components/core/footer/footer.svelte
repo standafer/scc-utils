@@ -6,31 +6,34 @@
     import { Button } from "@/components/ui/button";
 </script>
 
-<p class="text-xs text-muted-foreground">
+<p class="text-xs text-muted-foreground mt-4">
     <b>
         Copyright &#169; {new Date().getFullYear()} Ethan Standafer. All rights reserved.
     </b>
     Contact me at ethanstandafer [at] gmail [dot] com. (doing this to avoid email
     scrapers)
 </p>
-<Tooltip.Root openDelay={0}>
-    <Tooltip.Trigger>
-        <Button
-            class="mt-4 text-xs text-muted-foreground"
-            variant="link"
-            href="https://github.com/standafer/scc-utils"
-            target="_blank"
-        >
-            <span class="mr-2 h-full">
-                {@html Github}
-            </span>
-            Source Code
-            <span class="ml-2 h-full">
-                {@html ArrowOutward}
-            </span>
-        </Button>
-    </Tooltip.Trigger>
-    <Tooltip.Content>
-        <p>This is an external link to the GitHub repository</p>
-    </Tooltip.Content>
-</Tooltip.Root>
+
+<div class="w-full flex mt-4">
+    <Tooltip.Root openDelay={0}>
+        <Tooltip.Trigger>
+            <Button
+                class="text-xs text-muted-foreground"
+                variant="link"
+                href="https://github.com/standafer/scc-utils"
+                target="_blank"
+            >
+                <span class="mr-2 h-full">
+                    {@html Github}
+                </span>
+                Source Code
+                <span class="ml-2 h-full">
+                    {@html ArrowOutward}
+                </span>
+            </Button>
+        </Tooltip.Trigger>
+        <Tooltip.Content>
+            <p>This is an external link to the GitHub repository</p>
+        </Tooltip.Content>
+    </Tooltip.Root>
+</div>
