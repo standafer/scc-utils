@@ -1,0 +1,49 @@
+---
+import MainLayout from "@/layouts/mainLayout.astro";
+import { Separator } from "@/components/ui/separator";
+import FooterButtons from "@/components/core/footer/footer-buttons.svelte";
+import { Button } from "@/components/ui/button";
+
+import { LINKS } from "@/library/links";
+import Footer from "@/components/core/footer/footer.svelte";
+---
+
+<MainLayout>
+    <div
+        class="flex flex-col items-center justify-center space-y-4 max-w-2xl mx-auto"
+    >
+        <h1 class="text-4xl font-bold">
+            <span
+                class="p-[0px] px-[8px] rounded-md bg-foreground text-background"
+            >
+                Unofficial</span
+            >
+            Solano Community College Utilities
+        </h1>
+        <p class="text-muted-foreground">
+            I've created thing(s) here that made my life easier. Maybe it'll
+            make yours too?
+        </p>
+        <Separator />
+        <div class="flex justify-start w-full">
+            {
+                LINKS.map(({ href, text, icon }) => (
+                    <Button variant="link" href={href}>
+                        <div class="flex items-center gap-2">
+                            <span class="w-6 h-6">
+                                <Fragment set:html={icon} />
+                            </span>
+                            <span class="inline-block">{text}</span>
+                        </div>
+                    </Button>
+                ))
+            }
+        </div>
+        <Separator />
+        <div class="flex justify-start w-full">
+            <FooterButtons client:load />
+        </div>
+        <Footer client:load />
+        <p class="text-xs text-muted-foreground"></p>
+    </div>
+</MainLayout>

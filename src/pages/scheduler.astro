@@ -1,0 +1,10 @@
+---
+import SchedulerPage from "@/components/scheduler-page.svelte";
+import MainLayout from "@/layouts/mainLayout.astro";
+---
+
+<MainLayout>
+    <div class="flex items-center gap-4">
+        <SchedulerPage client:only="svelte" />
+    </div>
+</MainLayout>

@@ -1,0 +1,53 @@
+---
+import MobileMenu from "./header-mobile-menu.svelte";
+import ThemeToggle from "./theme-toggle.svelte";
+import HeaderLink from "./header-link.astro";
+import { Button } from "@/components/ui/button";
+import { LINKS } from "@/library/links";
+---
+
+<div
+    class="flex flex-col w-full bg-blue-600 items-start justify-center gap-6 px-4 py-1 dark:bg-gray-800"
+>
+    <p class="text-white text-center">
+        This website is open source & not officially recognized by Solano
+        Community College. Created by a student.
+    </p>
+</div>
+<div class="sticky top-0">
+    <header
+        class="relative flex h-16 items-center gap-4 border-b z-100 px-4 md:px-6"
+    >
+        <nav
+            class="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6"
+        >
+            <Button
+                variant="link"
+                class="text-nowrap font-bold text-lg px-0"
+                href="/scc-utils"
+            >
+                Solano Community College Utilities
+            </Button>
+
+            {
+                LINKS.map(({ href, text, icon }) => (
+                    <HeaderLink href={href} class="transition-colors">
+                        <div class="flex items-center gap-2">
+                            <span class="w-6 h-6">
+                                <Fragment set:html={icon} />
+                            </span>
+                            <span class="inline-block">{text}</span>
+                        </div>
+                    </HeaderLink>
+                ))
+            }
+        </nav>
+        <MobileMenu links={LINKS} client:load />
+
+        <div class="flex items-center gap-4 ml-auto md:gap-2 lg:gap-4">
+            <div class="ml-auto flex-1">
+                <ThemeToggle client:only="svelte" />
+            </div>
+        </div>
+    </header>
+</div>
