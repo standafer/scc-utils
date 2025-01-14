@@ -16,7 +16,6 @@ export default defineConfig({
         plugins: [
             Icons({
                 compiler: "astro",
-                autoInstall: true,
             }),
         ],
     },

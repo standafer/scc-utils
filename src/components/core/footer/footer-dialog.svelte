@@ -3,8 +3,8 @@
     import HeartFace from "~icons/fluent-emoji-flat/smiling-face-with-hearts?raw&width=100%25&height=100%25";
     import Heart from "~icons/fluent-emoji-flat/sparkling-heart?raw&width=100%25&height=100%25";
     import PartyPopper from "~icons/fluent-emoji-flat/party-popper?raw&width=100%25&height=100%25";
-    import ArrowOutward from "~icons/material-symbols/arrow-outward?raw&width=100%25&height=100%25";
 
+    import OutwardIcon from "./outward-icon.svelte";
     import * as Dialog from "@/components/ui/dialog";
     import * as Tabs from "@/components/ui/tabs";
     import * as Accordion from "@/components/ui/accordion";
@@ -87,7 +87,7 @@
                                 </span>
                                 My BuyMeACoffee
                                 <span class="ml-2 h-full">
-                                    {@html ArrowOutward}
+                                    <OutwardIcon />
                                 </span>
                             </Button>
                         </Tooltip.Trigger>

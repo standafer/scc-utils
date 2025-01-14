@@ -1,6 +1,6 @@
 <script lang="ts">
-    import ArrowOutward from "~icons/material-symbols/arrow-outward?raw&width=100%25&height=100%25";
     import Github from "~icons/mdi/github?raw&width=100%25&height=100%25";
+    import OutwardIcon from "./outward-icon.svelte";
 
     import * as Tooltip from "@/components/ui/tooltip";
     import { Button } from "@/components/ui/button";
@@ -28,7 +28,7 @@
                 </span>
                 Source Code
                 <span class="ml-2 h-full">
-                    {@html ArrowOutward}
+                    <OutwardIcon />
                 </span>
             </Button>
         </Tooltip.Trigger>
