@@ -136,7 +136,7 @@
 <div class="flex flex-col w-full">
     <h4 class="flex items-center justify-start space-x-2 text-base">
         <span class="font-bold">All data stays local on this browser.</span>
-        <span>Please watch</span>
+        <span>Please watch the</span>
         <Tooltip.Root openDelay={0}>
             <Tooltip.Trigger>
                 <Button
@@ -144,7 +144,7 @@
                     target="_blank"
                     className="flex items-center"
                 >
-                    <span class="">the tutorial</span>
+                    <span class="">YouTube tutorial</span>
                     <OutwardIcon className="h-4 w-4" />
                 </Button>
             </Tooltip.Trigger>
@@ -152,7 +152,11 @@
                 <p>This is an external link to YouTube</p>
             </Tooltip.Content>
         </Tooltip.Root>
-        <span>before entering files</span>
+        <span>before entering files.</span>
+        <h4 class="text-muted-foreground text-xs">
+            If something breaks (like nothing displaying after importing the
+            Solano HTML file), clear the site cookies.
+        </h4>
     </h4>
     <Collapsible.Root class="w-full space-y-2 mt-4">
         <div class="flex items-center justify-between space-x-4 px-4">
