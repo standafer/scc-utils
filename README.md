@@ -34,7 +34,7 @@ You can use 100% of the features without an internet connection! All procesing h
 
 ## Getting Started
 
-**If you're planning on using the Schedule Builder, please watch [the tutorial](https://www.youtube.com/watch?v=idA7ymO2aDo), as getting the classes imported requires specific instructions.** All utilities are available through [the website](https://standafer.github.io/scc-utils/)!
+**If you're planning on using the Schedule Builder, please watch [the tutorial](https://www.youtube.com/watch?v=idA7ymO2aDo), as getting the classes imported requires specific instructions.** All utilities are available through [the website](https://standafer.github.io/scc-utils/)! STROLL language docs available [here](https://docs.google.com/document/d/e/2PACX-1vSkiGGzFM129YTMKhnafEAYZV1yeKvS3k9z4jIglmlIZohBvc2QLCuEGWf18nKQbMEG9UXIXV6uDoYR/pub).
 
 ### Development / Contributing
 
